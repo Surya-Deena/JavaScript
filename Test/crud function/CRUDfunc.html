@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./crud.css">
+</head>
+<body>  
+    <div class="head">JavaScript CRUD</div>
+    <div class="form">
+        <div class="label">
+            <label>Employee Name</label>
+            <label>Phone Numbar</label>
+            <label>E-mail ID</label>
+            <label>Salary</label>
+            <label>Address</label>
+        </div>
+        <div class="inpt">
+            <input type="text" placeholder="Employee Name" id="name">
+            <input type="number" placeholder="Number" id="number">
+            <input type="text" placeholder="Email" id="mail">
+            <input type="number" placeholder="Salary" id="Salary">
+            <input type="text" placeholder="Address" id="address">
+        </div>
+    </div>
+    <div class="btn">
+        <button onclick="onSubmit()">Submit</button>
+    </div>
+    <div class ="tab">
+        <table class="list" id="emplist">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+</div>
+
+    <script>
+        var selectedRow=null;
+        function onSubmit(){
+            if(validate()){
+                var formData=readFormData();
+                if(selectedRow==null){
+                    insertNewRecord(formData);
+                }else{
+                    updateRecord(formData);
+                }
+                resetForm();
+            }
+        }
+        function readFormData(){
+            formData["Name"]=document.getElementById("Name").value;
+            formData["number"]=document.getElementById("number").value;
+            formData["email"]=document.getElementById("mail").value;
+            formData["salary"]=document.getElementById("salary").value;
+            formData["city"]=document.getElementById("address").value;
+            return formData;
+        }
+        function insertNewRecord(){
+        }
+    </script>
+</body>
+</html>

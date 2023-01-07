@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <input type="text" placeholder="number" id="inp">
+    <button type="button" onmouseout="fibona()">OUTPUT</button>
+    <script>
+        function fibona(){
+            var n=document.getElementById("inp").value;
+            let val1=0,val2=1,value;
+            console.log("Fibonacci Series "+n);
+            for(i=1;i<=n;i++){
+                console.log(val1);
+                value=val1+val2;
+                val1=val2;
+                val2=value;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.home{
+    width: 100%;
+}
+.head{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-size: 4rem;
+    font-style: italic;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blueviolet;
+}
+.container{
+    width: 50%;
+    height: 900px;
+    background-image: url(./pic.jpg);
+    background-size: 100% 100%;
+    padding-top: 50px;
+}
+.container .labels{
+    width: 30%;
+    height: 400px;
+    float: left;
+    padding-left: 20px;
+    margin-left: 120px;
+}
+.container .inputs{
+    float: left;
+    width: 35%;
+    height: 400px;
+    position: relative;
+}
+.labels label{
+    width: 100%;
+    height: 30px;
+    margin-top: 7px;
+    margin-bottom:32px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.input{
+    position: relative;
+}
+.inputs input{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom:26px;
+    border-radius: 10px;
+    padding-left: 10px;
+    border: 2px solid rgb(240, 239, 242);
+    background: rgba(244, 251, 252, 0.578);
+}
+input::placeholder{
+    font-size: 20px;
+    font-weight: 600;
+    color:rgb(89, 184, 179);
+}
+.input .drp{
+    bottom: -35px;
+}
+.input p{
+    position: absolute;
+    bottom: -10px;
+    z-index: 1;
+    color: rgba(228, 54, 54, 0.717) ;
+    border-radius: 10px;
+    padding: 0px 3px;
+}
+.button{
+    position: relative;
+    left: -70px;
+    top: 20px;
+}
+button {
+    width:50%;
+}
+.checkbox{
+    width: 80%;
+    height: 50px;
+    color:rgb(89, 184, 179);
+    margin-top: 7px;
+    margin-bottom: 15px ;
+}
+.checkbox .check{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+}
+.checkbox .txt{
+    margin-left: 5px;
+    margin-top: 1px;
+    font-weight: 700;
+    font-size: 18px;
+}
+.input select{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}

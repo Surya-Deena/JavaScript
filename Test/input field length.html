@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Input field increment</h3>
+    <input type="text" oninput="inp(this)">
+    <script>
+        function inp(x){
+            var val = x.value.length;
+            if(val>=10)
+            {
+                var length = val +"ch";
+                x.style.width=length;
+            }
+        }
+    </script>
+</body>
+</html>

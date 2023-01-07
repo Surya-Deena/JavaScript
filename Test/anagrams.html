@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrams</title>
+</head>
+<body>
+    <h2>Anagrams</h2>
+    <input type="text" name="" id="txt1">
+    <input type="text" name="" id="txt2">
+    <button onclick="anagram()">buttom</button>
+    <p id="out"></p>
+    <script>
+        function anagram(){
+            let t1=document.getElementById("txt1").value;
+            let t2=document.getElementById("txt2").value;
+            let text1=t1.split("").sort().join("");
+            let text2=t2.split("").sort().join("");
+            if(text1 === text2){
+                out.innerHTML="true";
+            }else{
+                out.innerHTML="false";
+            }
+        }
+        
+    </script>
+</body>
+</html>

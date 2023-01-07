@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch case</h1>
+    <input type="text" value="" id="in">
+    <button type="button" onclick="put()">search</button>
+    <p id="out"></p>
+    <script>
+        function put(){
+            let money;
+            money=document.getElementsById("in").value;
+            switch(true){
+                case money >= 60000:
+                    document.getElementById("out").innerHTML="Try IOS device";
+                    break;
+                case money >= 10000:
+                    document.getElementById("out").innerHTML="Try adroid device";
+                    break;
+                case money >= 5000:
+                    document.getElementById("out").innerHTML="Save money and get later ";
+                    break;
+                default:
+                    document.getElementById("out").innerHTML="Vaaipu illa raja";
+            }
+        }
+    </script>
+</body>
+</html>

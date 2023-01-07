@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Prime number checker</h1>
+    <input type="text" placeholder="number" id="num">
+    <h4 id="num"></h4>
+    <button type="button" onclick="prime()">check</button>
+    
+    <script>
+      function  prime(){
+        var n,i,value=true;
+        n=document.getElementById("num").value;
+        if(n==1){
+            alert("1 is neither prime nor composite number");
+        }else if(n>1){
+            for(i=2;i<n;i++){
+                if(n%i==0){
+                    value=false;
+                }
+                }if(value){
+                num.innerHTML=n+" is prime number";}
+                else{ 
+                    num.innerHTML=n+" is not prime number";
+                }
+            }
+            else{
+                num.innerHTML=n+" is not prime value";
+            }
+        }
+    </script>
+</body>
+</html>

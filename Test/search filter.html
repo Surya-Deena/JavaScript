@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: purple;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            width: 250px;
+            height: 30px;
+            font-size: 26px;
+            color: violet;
+        }
+        li{
+            width: 150px;
+            height: 30px;
+            font-size: 18px;
+            margin-top: 5px;
+            padding: 2px;
+            list-style-type: none;
+            display: none;
+        }
+        input::placeholder{
+            font-size: 18px;
+            padding-left: 5px;
+        }
+        li a{
+            text-decoration: none;
+            color: rgb(79, 74, 74);
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array filter</h1>
+    <input type="text" id="inpt" placeholder="Search..." onkeyup="show()">
+    <ul id="ul">
+        <li><a href="*">W3schools</a></li>
+        <li><a href="*">Nschools</a></li>
+        <li><a href="*">JavaScript</a></li>
+        <li><a href="*">Python</a></li>
+        <li><a href="*">Java</a></li>
+        <li><a href="*">JSON</a></li>
+        <li><a href="*">React</a></li>
+        <li><a href="*">Node</a></li>
+        <li><a href="*">learn more</a></li>
+        <li><a href="*">MySQL</a></li>
+        <li><a href="*">Add</a></li>
+        <li><a href="*">audio</a></li>
+        <li><a href="*">Music</a></li>
+        <li><a href="*">View</a></li>
+    </ul>
+    <p id="r"></p>
+    <script>
+        function show() {
+    var input, ul, li, a, i, stre;
+    input = document.getElementById("inpt").value.toUpperCase();
+    ul = document.getElementById("ul");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        stre = a.textContent || a.innerText;
+        if (stre.toUpperCase().indexOf(input) > -1) {
+            li[i].style.display = "block";
+        } else {
+            li[i].style.display = "none";
+        }
+
+    }
+}
+
+    </script>
+</body>
+</html>

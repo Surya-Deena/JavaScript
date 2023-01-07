@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FACTORIALS</title>
+</head>
+<body>
+    <h1>FACTORIALS</h1>
+    <input type="text" placeholder="number" id="num">
+    <h4 id="txt"></h4>
+    <button type="button" onclick="run()">output</button>
+    <script>
+        function run(){
+            var n=document.getElementById("num").value;
+            if(n<0){
+                alert("Error! factorial for nagative number does not exeist");
+            }else{
+                let value=1;
+                for(i=1;i<=n;i++){
+                value*=i;}
+                txt.innerHTML="factorial of "+n+" is "+value;
+            }
+        }
+    </script>
+</body>
+</html>
